@@ -1,25 +1,25 @@
-[debug] [2020-02-14T20:32:19.419Z] ----------------------------------------------------------------------
-[debug] [2020-02-14T20:32:19.420Z] Command:       /usr/local/bin/firebase /home/ayan/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase serve
-[debug] [2020-02-14T20:32:19.420Z] CLI Version:   7.13.0
-[debug] [2020-02-14T20:32:19.420Z] Platform:      linux
-[debug] [2020-02-14T20:32:19.420Z] Node Version:  v12.13.1
-[debug] [2020-02-14T20:32:19.421Z] Time:          Sat Feb 15 2020 02:02:19 GMT+0530 (India Standard Time)
-[debug] [2020-02-14T20:32:19.421Z] ----------------------------------------------------------------------
-[debug] [2020-02-14T20:32:19.421Z] 
-[debug] [2020-02-14T20:32:19.424Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
-[debug] [2020-02-14T20:32:19.424Z] > authorizing via signed-in user
-[debug] [2020-02-14T20:32:19.424Z] [iam] checking project electrophoria-2020 for permissions ["firebase.projects.get"]
-[debug] [2020-02-14T20:32:19.425Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/electrophoria-2020:testIamPermissions  
+[debug] [2020-02-14T21:07:32.845Z] ----------------------------------------------------------------------
+[debug] [2020-02-14T21:07:32.846Z] Command:       /usr/local/bin/firebase /home/ayan/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase serve
+[debug] [2020-02-14T21:07:32.846Z] CLI Version:   7.13.0
+[debug] [2020-02-14T21:07:32.846Z] Platform:      linux
+[debug] [2020-02-14T21:07:32.846Z] Node Version:  v12.13.1
+[debug] [2020-02-14T21:07:32.846Z] Time:          Sat Feb 15 2020 02:37:32 GMT+0530 (India Standard Time)
+[debug] [2020-02-14T21:07:32.846Z] ----------------------------------------------------------------------
+[debug] [2020-02-14T21:07:32.847Z] 
+[debug] [2020-02-14T21:07:32.850Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-14T21:07:32.850Z] > authorizing via signed-in user
+[debug] [2020-02-14T21:07:32.851Z] [iam] checking project electrophoria-2020 for permissions ["firebase.projects.get"]
+[debug] [2020-02-14T21:07:32.852Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/electrophoria-2020:testIamPermissions  
 
-[debug] [2020-02-14T20:32:21.508Z] <<< HTTP RESPONSE 200
-[debug] [2020-02-14T20:32:21.515Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/electrophoria-2020  
+[debug] [2020-02-14T21:07:35.026Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-14T21:07:35.028Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/electrophoria-2020  
  
-[debug] [2020-02-14T20:32:22.108Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-14T21:07:35.945Z] <<< HTTP RESPONSE 200
 [info] 
-[info] === Serving from '/home/ayan/Projects/electrophoria-2020.firebaseapp-master'...
+[info] === Serving from '/home/ayan/Projects/electrophoria2020'...
 [info] 
-[debug] [2020-02-14T20:32:22.115Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/electrophoria-2020/webApps/-/config  
+[debug] [2020-02-14T21:07:35.950Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/electrophoria-2020/webApps/-/config  
  
-[debug] [2020-02-14T20:32:23.338Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-14T21:07:37.171Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
