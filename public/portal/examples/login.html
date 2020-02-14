@@ -1,0 +1,215 @@
+<!--
+
+=========================================================
+* Argon Dashboard - v1.1.1
+=========================================================
+
+* Product Page: https://www.creative-tim.com/product/argon-dashboard
+* Copyright 2019 Creative Tim (https://www.creative-tim.com)
+* Licensed under MIT (https://github.com/creativetimofficial/argon-dashboard/blob/master/LICENSE.md)
+
+* Coded by Creative Tim
+
+=========================================================
+
+* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software. -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>
+    Electrophoria'20 Login
+  </title>
+  <!-- Favicon -->
+  <link href="../assets/img/brand/logo.png" rel="icon" type="image/png">
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <!-- Icons -->
+  <link href="../assets/js/plugins/nucleo/css/nucleo.css" rel="stylesheet" />
+  <link href="../assets/js/plugins/@fortawesome/fontawesome-free/css/all.min.css" rel="stylesheet" />
+  <!-- CSS Files -->
+  <link href="../assets/css/argon-dashboard.css?v=1.1.1" rel="stylesheet" />
+</head>
+
+<body class="bg-default">
+  <div class="main-content">
+    <!-- Navbar -->
+    <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark">
+      <div class="container px-5">
+        <a class="navbar-brand" href="https://electrophoria-2020.firebaseapp.com/">
+          <img src="../assets/img/brand/electrophoria_alt.png"style="width:205px;height:85px;">
+        </a>
+        
+      </div>
+    </nav>
+    <!-- Header -->
+    <div class="header bg-gradient-primary py-7 py-lg-8">
+      
+      <div class="container">
+        
+        <div class="header-body text-center mb-7">
+          
+          <div class="row justify-content-center">
+            <div class="col-lg-5 col-md-6">
+              <h1 class="text-white">Welcome to Electrophoria 2020!</h1>
+              <p class="text-lead text-light">#sabka katega</p>
+              <h1 class="text-white">Login Here</h1>
+              
+              <!--<p hidden class="text-lead text-red" id="valid_passalert">Please provide valid password or click on Forgot Password to reset it.</p>-->
+              <div id="valid_emailalert" style="display: none;">
+                <p class="text-lead text-red">Please provide valid Email id.</p>
+              </div>
+
+              <div id="valid_passalert" style="display: none;">
+                <p class="text-lead text-red">Please provide valid password or click on Forgot Password to reset it.</p>
+              </div>
+
+              <div id="valid_credalert" style="display: none;">
+                <p class="text-lead text-red">The given credentials(email/password) are wrong please re-enter.</p>
+              </div>
+              
+            
+            </div>
+            
+
+          </div>
+        </div>
+      </div>
+      <div class="separator separator-bottom separator-skew zindex-100">
+        <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
+          <polygon class="fill-default" points="2560 0 2560 100 0 100"></polygon>
+        </svg>
+      </div>
+    </div>
+    <!-- Page content -->
+    <div class="container mt--8 pb-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-5 col-md-7">
+          <div class="card bg-secondary shadow border-0">
+            <div class="card-header bg-transparent pb-5">
+              <div class="text-muted text-center mt-2 mb-3"><small>All students sign in with</small></div>
+              <div class="btn-wrapper text-center">
+                
+                <button onclick="googleSignin()" class="btn btn-neutral btn-icon">
+                  <span class="btn-inner--icon"><img src="../assets/img/icons/common/google.svg"></span>
+                  <span class="btn-inner--text">Google</span>
+                </button>
+                
+              </div>
+            </div>
+            <div class="card-body px-lg-5 py-lg-5">
+              <div class="text-center text-muted mb-4">
+                <small>For admin login use credentials</small>
+              </div>
+              
+              <form id="form-login"role="form">
+                <div class="form-group mb-3">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-email-83"></i></span>
+                    </div>
+                    <input id="email-login" class="form-control" placeholder="Username" type="email">
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="input-group input-group-alternative">
+                    <div class="input-group-prepend">
+                      <span class="input-group-text"><i class="ni ni-lock-circle-open"></i></span>
+                    </div>
+                    <input id="pass-login"class="form-control" placeholder="Password" type="password">
+                  </div>
+                </div>
+                
+                <div class="text-center">
+                  <button onclick="emailSignin()" type="button" class="btn btn-primary my-4">Sign in</button>
+                </div>
+              </form>
+            </div>
+          </div>
+         
+        </div>
+      </div>
+    </div>
+    <footer class="py-5">
+      <div class="container">
+        <div class="row align-items-center justify-content-xl-between">
+          <div class="col-xl-6">
+            <div class="copyright text-center text-xl-left text-muted">
+              <a
+                href="https://www.etceju.org/"
+                class="font-weight-bold ml-1"
+                target="_blank"
+                >Department of Electronics and Telecommunication Engineering , Jadavpur University</a
+              >
+            </div>
+          </div>
+          <div class="col-xl-6">
+            <ul
+              class="nav nav-footer justify-content-center justify-content-xl-end"
+            >
+              <li class="nav-item">
+                <a href="mailto:electrophoria2020@gmail.com" class="nav-link" target="_blank"
+                  ><svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                  >
+                    <title>email-84</title>
+                    <g fill="#111111">
+                      <path
+                        fill="#111111"
+                        d="M15,1H1C0.448,1,0,1.447,0,2v12c0,0.553,0.448,1,1,1h14c0.552,0,1-0.447,1-1V2C16,1.447,15.552,1,15,1z M14,13H2V6.723l5.504,3.145c0.308,0.176,0.685,0.176,0.992,0L14,6.723V13z M14,4.42L8,7.849L2,4.42V3h12V4.42z"
+                      ></path>
+                    </g>
+                  </svg>
+                  electrophoria2020@gmail.com</a
+                >
+              </li>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!--   Core   -->
+  <script src="../assets/js/plugins/jquery/dist/jquery.min.js"></script>
+  <script src="../assets/js/plugins/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+  <!--   Optional JS   -->
+  <!--   Argon JS   -->
+  <script src="../assets/js/argon-dashboard.min.js?v=1.1.1"></script>
+  <script src="https://cdn.trackjs.com/agent/v3/latest/t.js"></script>
+  <script>
+    window.TrackJS &&
+      TrackJS.install({
+        token: "ee6fab19c5a04ac1a32a645abde4613a",
+        application: "argon-dashboard-free"
+      });
+  </script>
+
+<script defer src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+<script defer src="https://www.gstatic.com/firebasejs/7.7.0/firebase-database.js"></script>
+
+// ...
+
+<script defer src="../assets/js/init-firebase.js"></script>
+<script defer src="../assets/js/login.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
