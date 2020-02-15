@@ -23,3 +23,33 @@
 [debug] [2020-02-14T21:07:37.171Z] <<< HTTP RESPONSE 200
 [info] i  hosting: Serving hosting files from: public
 [info] ✔  hosting: Local server: http://localhost:5000
+[debug] [2020-02-14T21:23:42.113Z] ----------------------------------------------------------------------
+[debug] [2020-02-14T21:23:42.115Z] Command:       /usr/local/bin/firebase /home/ayan/.cache/firebase/tools/lib/node_modules/firebase-tools/lib/bin/firebase serve
+[debug] [2020-02-14T21:23:42.115Z] CLI Version:   7.13.0
+[debug] [2020-02-14T21:23:42.115Z] Platform:      linux
+[debug] [2020-02-14T21:23:42.115Z] Node Version:  v12.13.1
+[debug] [2020-02-14T21:23:42.115Z] Time:          Sat Feb 15 2020 02:53:42 GMT+0530 (India Standard Time)
+[debug] [2020-02-14T21:23:42.115Z] ----------------------------------------------------------------------
+[debug] [2020-02-14T21:23:42.115Z] 
+[debug] [2020-02-14T21:23:42.119Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-02-14T21:23:42.119Z] > authorizing via signed-in user
+[debug] [2020-02-14T21:23:42.119Z] [iam] checking project electrophoria-2020 for permissions ["firebase.projects.get"]
+[debug] [2020-02-14T21:23:42.120Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-02-14T21:23:42.120Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-02-14T21:23:42.522Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-14T21:23:42.574Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/electrophoria-2020:testIamPermissions  
+
+[debug] [2020-02-14T21:23:44.704Z] <<< HTTP RESPONSE 200
+[debug] [2020-02-14T21:23:44.708Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/electrophoria-2020  
+ 
+[debug] [2020-02-14T21:23:45.640Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/home/ayan/Projects/electrophoria2020'...
+[info] 
+[debug] [2020-02-14T21:23:45.644Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/electrophoria-2020/webApps/-/config  
+ 
+[debug] [2020-02-14T21:23:46.892Z] <<< HTTP RESPONSE 200
+[warn] ⚠  hosting: Port 5000 is not available. Trying another port...
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5005
