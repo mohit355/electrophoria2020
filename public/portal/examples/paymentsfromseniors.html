@@ -218,9 +218,107 @@
       <div id="req_for_pay" style="display: none;" class="alert alert-warning" role="alert">
         <strong>Payment Due !!</strong> Please complete your payments within the final deadline 
       </div>
-      <button  id="payment_button" type="button" class="btn btn-primary btn-lg" style="display: none;">Proceed to Pay
-
+      
+      <button id="payment_button" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal" style="display: none;">
+        Payment Instructions
       </button>
+      
+      <!-- Modal -->
+      <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Complete your Payment for Electrophoria 2020</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              
+              <!--Add modal contents here-->
+              <form>
+                <h6 class="heading-small text-muted mb-4">Please Select Your Payment mode</h6>
+                  <div class="col-lg-6">
+                    <div class="form-group">
+                      <label class="form-control-label" for="category">Payment mode</label>
+                      <select  id="payment_method" class="form-control form-control-alternative">
+                        <option value="none_selected">Select your payment mode</option>
+                        <option value="cash_pay">Cash</option>
+                        <option value="online_pay">Online(BHIM/UPI/GPAY/PAYTM/AMAZON PAY)</option>
+                        
+                      </select>
+                    </div>
+                  </div>
+                  <div class="col-lg-6" id="div_cashpay" style="display: none;">
+                    <div class="form-group">
+                      <h3>Please contact the following persons for cash payment</h3>
+                      
+                    </div>
+                  </div>
+                  
+              
+              
+              
+              
+              
+              
+             </form>
+             <div  id="div_onlinepay" style="display: none;">
+              <div>
+                <h3>Please make the payment through one of the given methods</h3>
+                <div class="row">
+                <img src="../assets/img/payment_online_methods/gpay.png" style="height: auto; width: auto;">
+                <img src="../assets/img/payment_online_methods/amazonpay.png" style="height: 45px; width: 105px;">
+                <img src="../assets/img/payment_online_methods/bhim.png" style="height: 45px; width: 105px;">
+                <img src="../assets/img/payment_online_methods/upi.png" style="height: 45px; width: 105px;">
+                <img src="../assets/img/payment_online_methods/paytm.png" style="height: 45px; width: 45px;">
+                <img src="../assets/img/payment_online_methods/phonepay.png" style="height: 45px; width: 45px;">
+
+              </div>
+              <p>Send your payment to ARKADEEP SINHA mobile no : 7602689904</p>
+              </div>
+              
+          <img src="../assets/img/payment_online_methods/gpayqr.png" style="height: 200px; width: 190px;">
+          <form>
+            <h6 class="heading-small text-muted mb-4">Please Fill out the form after completion of your payment</h6>
+                <div class="col-lg-6">
+                  <div class="form-group">
+                    <label class="form-control-label">Payment method</label>
+                    <select  id="payment_method" class="form-control form-control-alternative">
+                      <option value="none_selected">Select your payment method</option>
+                      <option value="cash_pay">BHIM/UPI</option>
+                      <option value="online_pay">Google Pay</option>
+                      <option value="online_pay">Amazon Pay</option>
+                      <option value="online_pay">Paytm</option>
+                      <option value="online_pay">PhonePe</option>
+                      
+                    </select>
+                    
+                      <div class="form-group">
+                        <label class="form-control-label">Online transaction id</label>
+                        <input type="text" id="input-transactionid" class="form-control form-control-alternative" placeholder="Transacton ID">
+                      </div>
+                    
+                  </div>
+                  
+                </div>
+
+          </form>
+  
+        </div>
+
+            
+              
+
+              <!--End of modal contents-->
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
       
       
       
@@ -373,6 +471,7 @@ console.log("logout unsuccessfull")
  
  <script defer src="../assets/js/readdata_userprofile.js"></script>
  <script defer src="../assets/js/payment_alertmanage.js"></script>
+ <script defer src="../assets/js/formcontrol_paymentfromseniors.js"></script>
  
 
 
