@@ -218,6 +218,9 @@
       <div id="req_for_pay" style="display: none;" class="alert alert-warning" role="alert">
         <strong>Payment Due !!</strong> Please complete your payments within the final deadline 
       </div>
+      <div id="payment_status_not_updated" style="display: none;" class="alert alert-info" role="alert">
+        <strong>Please wait !!</strong> We have recieved your payment request , we will update your payment status soon. (Generally it takes 4 working days after the payment day to update )     
+      </div>
       
       <button id="payment_button" type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#exampleModal" style="display: none;">
         Payment Instructions
@@ -241,7 +244,7 @@
                   <div class="col-lg-6">
                     <div class="form-group">
                       <label class="form-control-label" for="category">Payment mode</label>
-                      <select  id="payment_method" class="form-control form-control-alternative">
+                      <select  id="payment_method_actual" class="form-control form-control-alternative">
                         <option value="none_selected">Select your payment mode</option>
                         <option value="cash_pay">Cash</option>
                         <option value="online_pay">Online(BHIM/UPI/GPAY/PAYTM/AMAZON PAY)</option>
@@ -287,16 +290,16 @@
                     <label class="form-control-label">Payment method</label>
                     <select  id="payment_method" class="form-control form-control-alternative">
                       <option value="none_selected">Select your payment method</option>
-                      <option value="cash_pay">BHIM/UPI</option>
-                      <option value="online_pay">Google Pay</option>
-                      <option value="online_pay">Amazon Pay</option>
-                      <option value="online_pay">Paytm</option>
-                      <option value="online_pay">PhonePe</option>
+                      <option>BHIM/UPI</option>
+                      <option>Google Pay</option>
+                      <option>Amazon Pay</option>
+                      <option>Paytm</option>
+                      <option>PhonePe</option>
                       
                     </select>
                     
                       <div class="form-group">
-                        <label class="form-control-label">Online transaction id</label>
+                        <label class="form-control-label">Online transaction ID (Preferably UPI Transacton ID)</label>
                         <input type="text" id="input-transactionid" class="form-control form-control-alternative" placeholder="Transacton ID">
                       </div>
                     
@@ -315,7 +318,7 @@
             </div>
             <div class="modal-footer">
               <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Submit</button>
+              <button id="payment_initiate_btn" type="button" class="btn btn-primary">Submit</button>
             </div>
           </div>
         </div>
@@ -473,6 +476,8 @@ console.log("logout unsuccessfull")
  <script defer src="../assets/js/readdata_userprofile.js"></script>
  <script defer src="../assets/js/payment_alertmanage.js"></script>
  <script defer src="../assets/js/formcontrol_paymentfromseniors.js"></script>
+ <script defer src="../assets/js/paymentinitiateforminput.js"></script>
+
  
 
 

@@ -1,4 +1,4 @@
-$("#payment_method").change(function() {
+$("#payment_method_actual").change(function() {
     var div_cashpay = document.getElementById('div_cashpay');
     var div_onlinepay = document.getElementById('div_onlinepay');
     

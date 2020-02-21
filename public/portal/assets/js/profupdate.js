@@ -3,7 +3,7 @@ $("#btn-update").click(function(){
   var stud_year = $("#stud_year").val();
   var stu_email = $("#input-email").val();
   var user_email=firebase.auth().currentUser.email;
-  var stu_phno = $("#input-phno").val();
+  var stu_phno = $("#input-phno").val(); 
   var stu_juroll = $("#input-juroll").val();
   var stu_fullname = $("#input-fname").val();
   var stu_gender = $("#input-gender").val();
@@ -79,6 +79,7 @@ $("#btn-update").click(function(){
             var User_pay_status = 
                      {
                         "Payment Status":'N',
+                        "Payment Initiated":'N',
                      };
              
              userref.update(User_pay_status,function(error){

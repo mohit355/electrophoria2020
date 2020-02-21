@@ -19,6 +19,7 @@ firebase.auth().onAuthStateChanged(function(user)
                //Checking of payment status
 
                var payment_status = userref.child("Payment Status");
+               var payment_initiation_status = userref.child("Payment Initiated");
 
                payment_status.once('value', function(datasnapshot)
                {
@@ -29,8 +30,13 @@ firebase.auth().onAuthStateChanged(function(user)
 
                  var payment_incomplete_alert =document.getElementById('req_for_pay'); 
                  var payment_button_go =document.getElementById('payment_button'); 
+                 var payment_initiation_status_alert= document.getElementById('payment_status_not_updated'); 
                  
-                 if(datasnapshot.val()=="N")
+                 
+                 
+                 payment_initiation_status.once('value',function(datasnapshot_val){
+
+                    if(datasnapshot.val()=="N" && datasnapshot_val.val()=="N")
                  {
                   //Payment need to be done ... payment is incomplete
                   payment_incomplete_alert.style.display="block";
@@ -43,7 +49,18 @@ firebase.auth().onAuthStateChanged(function(user)
 
 
                  }
-                 else if(datasnapshot.val()=="Y")
+                 else if(datasnapshot.val()=="N" && datasnapshot_val.val()=="Y")
+                 {
+                  
+                  payment_incomplete_alert.style.display="none";
+                    payment_initiation_status_alert.style.display="block";
+
+                 }
+                 
+                 
+                 
+                 
+                 else if(datasnapshot.val()=="Y" && datasnapshot_val.val()=="Y")
                  {
                     //Payment reciept to be given ... payment is complete 
                     success_pay_alert.style.display="block";
@@ -57,6 +74,14 @@ firebase.auth().onAuthStateChanged(function(user)
                      
                      
                  }
+
+
+
+
+
+                 });
+
+                 
 
 
 
